@@ -23,9 +23,7 @@ const Registration = () => {
             date: new Date().toLocaleDateString(),
             time: new Date().toLocaleTimeString()
         };
-        // Simulate form submission and payment processing
         processPayment(newAttendee);
-        // Simulate sending a confirmation email
         sendConfirmationEmail(newAttendee);
         setFormData({ name: '', email: '', ticketType: '' });
         alert(`Thank you for registering, ${formData.name}! A confirmation email has been sent to ${formData.email}.`);
@@ -33,13 +31,11 @@ const Registration = () => {
 
     const processPayment = (attendee) => {
         console.log('Processing payment for:', attendee);
-        // Simulate payment processing logic here
-        return true; // Assume payment is successful
+        return true; 
     };
 
     const sendConfirmationEmail = (attendee) => {
         console.log('Sending confirmation email to:', attendee.email);
-        // Simulate sending email logic here
         console.log(`Dear ${attendee.name},\n\nThank you for registering!\nYour ticket type: ${attendee.ticketType || 'Standard'}\n\nBest regards,\nEvent Team`);
     };
 
